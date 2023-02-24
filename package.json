@@ -1,0 +1,25 @@
+{
+  "name": "dca-finalproject-twitter",
+  "version": "1.0.0",
+  "description": "This is the repository for the final project of the DcA class.",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve",
+    "build": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VideoCheese3773/DcA-FinalProject-Twitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VideoCheese3773/DcA-FinalProject-Twitter/issues"
+  },
+  "homepage": "https://github.com/VideoCheese3773/DcA-FinalProject-Twitter#readme",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
