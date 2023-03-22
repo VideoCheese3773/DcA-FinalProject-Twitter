@@ -18,16 +18,21 @@ mid-menu{
     border-color: aliceblue;
     margin-left: 20px;
     margin-right: 20px;
-    width: 600px;
+    width: 35%;
 }
 right-menu{
     border-style: solid;
     border-width: 1px;
     border-color: aliceblue;
-    width: 350px;
+    width: 16.5%;
     padding: 20px;
+    position: sticky;
+    top: 10px;    
 }
 
 left-menu{
-    width: 350px;
+    padding: 20px;
+    width: 16.5%;
+    position: sticky;
+    top: 10px;
 }
