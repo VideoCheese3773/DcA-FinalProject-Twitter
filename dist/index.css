@@ -1,0 +1,33 @@
+*{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+
+app-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-start;
+    background-color: green;
+    
+}
+
+mid-menu{
+    border-style: solid;
+    border-width: 1px;
+    border-color: aliceblue;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 600px;
+}
+right-menu{
+    border-style: solid;
+    border-width: 1px;
+    border-color: aliceblue;
+    width: 350px;
+    padding: 20px;
+}
+
+left-menu{
+    width: 350px;
+}

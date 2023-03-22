@@ -11,14 +11,12 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        const section = document.createElement('section');
-        const title = document.createElement('h2');
-
-        title.textContent = 'This is the title'
-
-        section.appendChild(title)
-
-        this.shadowRoot.appendChild(section)
+        this.shadowRoot.innerHTML=`
+        <link rel="stylesheet" href="./index.css">
+        <left-menu></left-menu>
+        <mid-menu></mid-menu>
+        <right-menu></right-menu>
+        `
     }
 }
 
