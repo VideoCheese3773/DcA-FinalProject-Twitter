@@ -41,6 +41,7 @@ class AppContainer extends HTMLElement {
         <link rel="stylesheet" href="./index.css">
         <left-menu></left-menu>
         <div class="mid-menu">
+            <search-bar></search-bar>
             ${tweets}
         </div>
         <right-menu></right-menu>`

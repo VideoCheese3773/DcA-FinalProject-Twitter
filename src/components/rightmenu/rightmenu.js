@@ -19,3 +19,4 @@ class RightMenu extends HTMLElement {
 }
 
 customElements.define('right-menu', RightMenu)
+export default RightMenu
