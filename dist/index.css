@@ -51,13 +51,14 @@ left-menu{
     top: 10px;
 }
 
+/*POSTS AND MID MENU ------------------------------------------------------*/
 .border{
     width: 100%;
     height: 1px;
     background-color: aliceblue;
-
     width: 100%;
 }
+
 .postBody{
     white-space: pre-line;
 }
@@ -91,6 +92,15 @@ left-menu{
     border: none;
     border-radius: 15px;
     padding: 1%;
+}
+/*LEFT MENU ------------------------------------------------------*/
+.leftMenuSection{
+    width: 100%;
+}
+
+.menuIcon{
+    width: 20px;
+
 }
 
 @media all and (max-width:930px){

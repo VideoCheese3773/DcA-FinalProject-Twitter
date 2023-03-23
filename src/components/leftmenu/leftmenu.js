@@ -10,10 +10,11 @@ class LeftMenu extends HTMLElement {
 
     render() {
         this.shadowRoot.innerHTML=`
-        <section>
+        <link rel="stylesheet" href="./index.css">
+        <section class="leftMenuSection">
             <div>
                 <img src="./img/twitterLogo.png" class="menuIcon">
-                <h1>Homes</h1>
+                <h1>Home</h1>
             </div>
             <div>
                 <img src="./img/hashtag.png" class="menuIcon">
