@@ -16,7 +16,7 @@ app-container{
 .mid-menu{
     border-style: solid;
     border-width: 1px;
-    border-color: aliceblue;
+    border-color: rgb(126, 126, 126);
     margin-left: 20px;
     margin-right: 20px;
     width: 35%;
@@ -35,12 +35,14 @@ app-container{
 
 right-menu{
     border-style: solid;
-    border-width: 1px;
-    border-color: aliceblue;
+    border-width: 2px;
+    border-color: rgb(126, 126, 126);
     width: 16.5%;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     position: sticky;
     top: 10px;
+    border-radius: 20px;
 }
 
 left-menu{
@@ -54,7 +56,7 @@ left-menu{
 .border{
     width: 100%;
     height: 1px;
-    background-color: aliceblue;
+    background-color: rgb(126, 126, 126);
     width: 100%;
 }
 
@@ -92,6 +94,7 @@ left-menu{
     border-radius: 15px;
     padding: 1%;
 }
+
 /*LEFT MENU ------------------------------------------------------*/
 .leftMenuSection{
     width: 100%;
@@ -115,6 +118,23 @@ left-menu{
     color: #FFFFFF;
 }
 
+/*RIGHT MENU ------------------------------------------------------*/
+.rightMenuText{
+    color: rgb(129, 129, 129);
+}
+
+.rightMenuButton{
+    width: 100%;
+    border-radius: 50px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: rgb(180, 180, 180);
+    font-weight: 800;
+    color: #000000;
+}
+
+
+/*RESPONSIVE MOBILE ------------------------------------------------------*/
 @media all and (max-width:930px){
     /*display: none*/
 }

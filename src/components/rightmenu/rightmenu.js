@@ -10,10 +10,12 @@ class RightMenu extends HTMLElement {
 
     render() {
         this.shadowRoot.innerHTML=`
+        <link rel="stylesheet" href="./index.css">
         <h1>New on twitter?</h1>
-        <h3>plz don't do this to yourself</h3>
-        <h1>this should be a button</h1>
-        <p>maybe it's better for us to no make these containers as components for the time being</p>
+        <p class="rightMenuText">Sign up now to obtain your own customized page.</p>
+        <button class="rightMenuButton">Create An Account</button>
+        <p class="rightMenuText">If you already have an account, <a href="">Log In</a>.</p>
+        <p class="rightMenuText">When you register, you are accepting our Terms and Services and our Privacy Policy, including the politics of Cookie Usage</p>
         `
     }
 }
