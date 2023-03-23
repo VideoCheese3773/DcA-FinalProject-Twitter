@@ -3,6 +3,7 @@
 *{
     background-color: rgb(0, 0, 0);
     color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 app-container{
@@ -10,8 +11,6 @@ app-container{
     flex-direction: row;
     justify-content: center;
     align-items:flex-start;
-    background-color: green;
-
 }
 
 .mid-menu{
@@ -76,7 +75,7 @@ left-menu{
     flex-direction:row;
     align-items: center;
     justify-content: space-between;
-    
+
     border-width: 1px;
     border-color: aliceblue;
 }
@@ -98,9 +97,22 @@ left-menu{
     width: 100%;
 }
 
-.menuIcon{
-    width: 20px;
+.leftMenuItem{
+    display: flex;
+    align-items: center;
+    gap: 6%;
+}
 
+.menuIcon{
+    height: 25px;
+}
+
+.leftMenuText{
+    color: rgb(129, 129, 129);
+}
+
+.selectedItem{
+    color: #FFFFFF;
 }
 
 @media all and (max-width:930px){
