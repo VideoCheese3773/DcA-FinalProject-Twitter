@@ -30,7 +30,7 @@ class Post extends HTMLElement{
         <link rel="stylesheet" href="./index.css">
         <div class="tagging">
         <img src="${this.userimg}" class="profPic">
-        <p><b>${this.username}</b></p>
+        <b>${this.username}</b>
         ${this.usertag}
         </div>
         <div class="postBody">
