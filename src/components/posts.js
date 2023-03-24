@@ -18,6 +18,25 @@ const Posts=[
         Anyways, who's hungry?`,
         image:"https://pbs.twimg.com/media/FAe_czuWQAcq9MV?format=png&name=small"
 
+    },
+
+    {
+        userimg: "https://pbs.twimg.com/media/E1yT-HxVUAEsiYV.jpg",
+        username: "LazyAF",
+        usertag: "@lazy_af",
+        message: `who's cat is this?
+        Damn he ugly.`,
+        image:"https://i.ytimg.com/vi/fTJ5o_uW3eM/maxresdefault.jpg"
+
+    },
+
+    {
+        userimg: "https://i.pinimg.com/736x/a3/d5/ad/a3d5ad5cd0dea2a42a32754d20d0d185.jpg",
+        username: "Danko13",
+        usertag: "@danko13",
+        message: `nice`,
+        image:"https://i1.sndcdn.com/artworks-ZqOHYpsjZtAtmTYR-4gjPpA-t500x500.jpg"
+
     }
 ]
 

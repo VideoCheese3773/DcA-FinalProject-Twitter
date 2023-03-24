@@ -81,14 +81,12 @@ left-menu{
     border-radius: 15px;
 }
 
-
 .searchCont{
     padding: 2%;
     display:flex;
     flex-direction:row;
     align-items: center;
     justify-content: space-between;
-
     border-width: 1px;
     border-color: aliceblue;
 }
