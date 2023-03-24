@@ -6,7 +6,10 @@ const Posts=[
         message: `You know, maybe al this anxiety Im feeling right now might be jus an overreaction, but still, Im hella' scared of what the autcome will be.
         
         So, it is what it is`,
-        image:"https://i.pinimg.com/564x/0d/06/c4/0d06c47be2206f3bf0ad8d5b52b3ac46.jpg"
+        image:"https://i.pinimg.com/564x/0d/06/c4/0d06c47be2206f3bf0ad8d5b52b3ac46.jpg",
+        comments: 0,
+        retweets: 0,
+        likes: 0,
 
     },
 
@@ -16,7 +19,11 @@ const Posts=[
         usertag: "@cheeto-11",
         message: `have you seen what's happening on Silicon Valley? that's gonna be terrible for the global economy.
         Anyways, who's hungry?`,
-        image:"https://pbs.twimg.com/media/FAe_czuWQAcq9MV?format=png&name=small"
+        image:"https://pbs.twimg.com/media/FAe_czuWQAcq9MV?format=png&name=small",
+        comments: 0,
+        retweets: 0,
+        likes: 0,
+
 
     },
 
@@ -26,7 +33,11 @@ const Posts=[
         usertag: "@lazy_af",
         message: `who's cat is this?
         Damn he ugly.`,
-        image:"https://i.ytimg.com/vi/fTJ5o_uW3eM/maxresdefault.jpg"
+        image:"https://i.ytimg.com/vi/fTJ5o_uW3eM/maxresdefault.jpg",
+        comments: 0,
+        retweets: 0,
+        likes: 0,
+
 
     },
 
@@ -35,7 +46,11 @@ const Posts=[
         username: "Danko13",
         usertag: "@danko13",
         message: `nice`,
-        image:"https://i1.sndcdn.com/artworks-ZqOHYpsjZtAtmTYR-4gjPpA-t500x500.jpg"
+        image:"https://i1.sndcdn.com/artworks-ZqOHYpsjZtAtmTYR-4gjPpA-t500x500.jpg",
+        comments: 0,
+        retweets: 0,
+        likes: 0,
+
 
     }
 ]

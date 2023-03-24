@@ -9,7 +9,7 @@
 
 class Post extends HTMLElement{
     static get observedAttributes(){
-        return ['userimg','username','usertag','message','image']
+        return ['userimg','username','usertag','message','image','comments','retweets','likes']
     }
 
     constructor(){
@@ -36,6 +36,11 @@ class Post extends HTMLElement{
         <div class="postBody">
         <p>${this.message}</p>
         <img src="${this.image}" class="postPic">
+        </div>
+        <div class="context-bar">
+        <div class="contextB"><img src="./img/comment.png" class="contextIcon">${this.comments}</div>
+        <div class="contextB"><img src="./img/retweet.png" class="contextIcon">${this.retweets}</div>
+        <div class="contextB"><img src="./img/heart.png" class="contextIcon">${this.likes}</div>
         </div>
         `;
     }
