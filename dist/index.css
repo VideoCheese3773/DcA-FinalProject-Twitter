@@ -79,6 +79,24 @@ left-menu {
     border-radius: 15px;
 }
 
+.context-bar{
+    display:flex;
+    flex-direction:row;
+    padding-left: 13%;
+    padding-bottom: 4%;
+}
+
+.contextB{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    gap:6%;
+}
+
+.contextIcon{
+    width: 14%;
+}
+
 .searchCont {
     padding: 2%;
     display: flex;
