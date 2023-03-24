@@ -23,7 +23,7 @@ class AppContainer extends HTMLElement {
         Posts.forEach((p) => {
             feed += `
             <div class="border"></div>
-            <my-post userimg="${p.userimg}" username="${p.username}" usertag="${p.usertag}" message="${p.message}" image="${p.image}"></my-post>
+            <my-post userimg="${p.userimg}" username="${p.username}" usertag="${p.usertag}" message="${p.message}" image="${p.image}" comments="${p.comments}" retweets="${p.retweets}" likes="${p.likes}"></my-post>
             <div class="border"></div>
             `
         });
