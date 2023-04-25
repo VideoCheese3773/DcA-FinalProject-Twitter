@@ -2,15 +2,17 @@ class LeftMenu extends HTMLElement {
 
     constructor() {
         super();
-        this.attachShadow({ mode: 'open' })
+        this.attachShadow({ mode: "open" })
     }
 
-    connectedCallback(){
-        this.render();
+    connectedCallback() {
+        if (this.shadowRoot) {
+            this.render()
+        }
     }
 
     render() {
-        this.shadowRoot.innerHTML=`
+        this.shadowRoot!.innerHTML = `
         <link rel="stylesheet" href="./index.css">
         <section class="leftMenuSection">
             <div class="leftMenuItem">
