@@ -68,7 +68,7 @@ export default class Post extends HTMLElement {
             css.innerHTML = styles;
             this.shadowRoot?.appendChild(css);
 
-            this.shadowRoot.innerHTML = `
+            this.shadowRoot.innerHTML += `
                 <section class="tagging">
                     <img src="${this.userimg}" class="profPic">
                     <b>${this.username}</b>

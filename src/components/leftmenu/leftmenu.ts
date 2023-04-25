@@ -1,3 +1,5 @@
+import styles from "./styles.css"
+
 class LeftMenu extends HTMLElement {
 
     constructor() {
@@ -12,7 +14,13 @@ class LeftMenu extends HTMLElement {
     }
 
     render() {
-        this.shadowRoot!.innerHTML = `
+        this.shadowRoot!.innerHTML = ``
+
+        const css = this.ownerDocument.createElement("style");
+        css.innerHTML = styles;
+        this.shadowRoot?.appendChild(css);
+
+        this.shadowRoot!.innerHTML += `
         <link rel="stylesheet" href="./index.css">
         <section class="leftMenuSection">
             <div class="leftMenuItem">
