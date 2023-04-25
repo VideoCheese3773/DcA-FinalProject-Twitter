@@ -45,6 +45,13 @@ class Dashboard extends HTMLElement {
             this.showP.forEach((p) => {
                 mid.appendChild(p);
             });
+
+            this.shadowRoot.appendChild(search)
+            this.shadowRoot.appendChild(right)
+            this.shadowRoot.appendChild(mid)
+            this.shadowRoot.appendChild(left)
+            
+
         }
     }
 }
