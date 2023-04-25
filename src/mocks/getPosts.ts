@@ -1,4 +1,6 @@
-const Posts=[
+import {PostData} from "../types/posts"
+
+const postList:PostData[]=[
     {
         userimg: "https://i.pinimg.com/564x/0d/06/c4/0d06c47be2206f3bf0ad8d5b52b3ac46.jpg",
         username: "Nakosume",
@@ -7,9 +9,9 @@ const Posts=[
         
         So, it is what it is`,
         image:"https://i.pinimg.com/564x/0d/06/c4/0d06c47be2206f3bf0ad8d5b52b3ac46.jpg",
-        comments: 0,
-        retweets: 0,
-        likes: 0,
+        comcount: "0",
+        retcount: "0",
+        likescount: "0",
 
     },
 
@@ -20,9 +22,9 @@ const Posts=[
         message: `have you seen what's happening on Silicon Valley? that's gonna be terrible for the global economy.
         Anyways, who's hungry?`,
         image:"https://pbs.twimg.com/media/FAe_czuWQAcq9MV?format=png&name=small",
-        comments: 0,
-        retweets: 0,
-        likes: 0,
+        comcount: "0",
+        retcount: "0",
+        likescount: "0",
 
 
     },
@@ -34,9 +36,9 @@ const Posts=[
         message: `who's cat is this?
         Damn he ugly.`,
         image:"https://i.ytimg.com/vi/fTJ5o_uW3eM/maxresdefault.jpg",
-        comments: 0,
-        retweets: 0,
-        likes: 0,
+        comcount: "0",
+        retcount: "0",
+        likescount: "0",
 
 
     },
@@ -47,12 +49,12 @@ const Posts=[
         usertag: "@danko13",
         message: `nice`,
         image:"https://i1.sndcdn.com/artworks-ZqOHYpsjZtAtmTYR-4gjPpA-t500x500.jpg",
-        comments: 0,
-        retweets: 0,
-        likes: 0,
+        comcount: "0",
+        retcount: "0",
+        likescount: "0",
 
 
     }
 ]
 
-export default Posts;
+export default postList;
