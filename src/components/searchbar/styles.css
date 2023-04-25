@@ -1,0 +1,22 @@
+.searchCont {
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-width: 1px;
+    border-color: aliceblue;
+}
+
+.searchIcon {
+    width: 5%;
+    height: 5%;
+}
+
+#search {
+    width: 70%;
+    background-color: rgb(32, 47, 54);
+    border: none;
+    border-radius: 15px;
+    padding: 1%;
+}
