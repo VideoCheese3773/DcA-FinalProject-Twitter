@@ -1,9 +1,10 @@
-import Post, { postProps } from "../components/post/post";
-import RightMenu from "../components/rightmenu/rightmenu";
-import LeftMenu from "../components/leftmenu/leftmenu";
-import SearchBar from "../components/searchbar/searchbar";
-import SignUp from "../components/signUp/SignUp"
-import postList from "../mocks/getPosts";
+import Post, { postProps } from "../../components/post/post";
+import RightMenu from "../../components/rightmenu/rightmenu";
+import LeftMenu from "../../components/leftmenu/leftmenu";
+import SearchBar from "../../components/searchbar/searchbar";
+import SignUp from "../../components/signUp/SignUp"
+import LogIn from "../../components/LogIn/logIn"
+import postList from "../../mocks/getPosts";
 import styles from "./styles.css"
 
 class Dashboard extends HTMLElement {
@@ -57,8 +58,8 @@ class Dashboard extends HTMLElement {
                 mid.appendChild(p);
             });
 
-            const signUp = this.ownerDocument.createElement("sign-up");
-            const logIn = this.ownerDocument.createElement('log-in')
+            const signUp = this.ownerDocument.createElement("sign-up") as SignUp
+            const logIn = this.ownerDocument.createElement('log-in') as LogIn
 
             container.appendChild(left)
             container.appendChild(mid)

@@ -1,7 +1,6 @@
 import styles from "./styles.css"
 
 class LeftMenuLogged extends HTMLElement {
-
     constructor() {
         super();
         this.attachShadow({ mode: "open" })

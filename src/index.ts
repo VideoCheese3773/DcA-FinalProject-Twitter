@@ -1,4 +1,5 @@
-import "./screens/dashboard"
+import "./screens/dashboard/dashboard"
+import "./screens/dashboard-logged/dashboard-logged"
 import "./components/export"
 
 class AppContainer extends HTMLElement {
@@ -12,7 +13,7 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        const dashboard = this.ownerDocument.createElement('app-dashboard');
+        const dashboard = this.ownerDocument.createElement('app-dashboard-logged');
         this.shadowRoot?.appendChild(dashboard);
     }
 }
