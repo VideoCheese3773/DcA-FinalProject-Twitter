@@ -17,9 +17,9 @@ export default class Post extends HTMLElement {
     usertag?: string;
     message?: string;
     image?: string;
-    comcount: string = "0";
-    retcount: string = "0";
-    likescount: string = "0";
+    comcount?: string;
+    retcount?: string;
+    likescount?: string;
 
 
     static get observedAttributes() {
