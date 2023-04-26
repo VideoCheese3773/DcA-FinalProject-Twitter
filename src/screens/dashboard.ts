@@ -58,17 +58,29 @@ class Dashboard extends HTMLElement {
             });
 
             const signUp = this.ownerDocument.createElement("sign-up");
+            const logIn = this.ownerDocument.createElement('log-in')
 
             container.appendChild(left)
             container.appendChild(mid)
             container.appendChild(right)
             container.appendChild(signUp)
+            container.appendChild(logIn)
             this.shadowRoot.appendChild(container)
 
-            const popUpMaster = signUp.shadowRoot?.getElementById("popUpMaster")
+            const popUpMasterSignUp = signUp.shadowRoot?.getElementById("popUpMaster")
+            const popUpMasterLogIn = logIn.shadowRoot?.getElementById("popUpMaster")
             const createAccount = right.shadowRoot?.getElementById("createAccount")
+            const logInButton = right.shadowRoot?.getElementById("logInButton")
+
+
+            //show sign up
             createAccount?.addEventListener('click', ()=>{
-                popUpMaster?.classList.remove("noShow")
+                popUpMasterSignUp?.classList.remove("noShow")
+            })
+
+            //show log in
+            logInButton?.addEventListener('click', ()=>{
+                popUpMasterLogIn?.classList.remove("noShow")
             })
         }
     }

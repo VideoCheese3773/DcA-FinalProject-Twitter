@@ -61,3 +61,17 @@
     color: rgb(0, 89, 255);
     text-decoration: underline;
 }
+
+@media all and (max-width: 930px) {
+    .popUpBody{
+        width: 80%;
+    }
+
+    .input{
+        width: 80%;
+    }
+
+    .button{
+        width: 83%;
+    }
+}

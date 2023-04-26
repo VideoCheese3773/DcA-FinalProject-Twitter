@@ -1,0 +1,77 @@
+.popUp{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 132, 255, 0.2);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noShow{
+    display: none;
+}
+
+.popUpBody{
+    background-color: black;
+    width: 35%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.closeButtonContainer{
+    width: 95%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menuIcon {
+    width:50px;
+}
+
+.banner{
+    font-size: 12pt;
+}
+
+.input{
+    width: 50%;
+    height: 40px;
+    margin-bottom: 2%;
+    border: 2px solid;
+    border-color: rgb(126, 126, 126);
+    background-color: black;
+    border-radius: 100px;
+    padding-left: 3%;
+    color: white;
+}
+
+.button{
+    width: 53%;
+    height: 40px;
+    border-radius: 100px;
+    border: 2px solid;
+}
+
+.logIn{
+    color: rgb(0, 89, 255);
+    text-decoration: underline;
+}
+
+@media all and (max-width: 930px) {
+    .popUpBody{
+        width: 80%;
+    }
+
+    .input{
+        width: 80%;
+    }
+
+    .button{
+        width: 83%;
+    }
+}

@@ -26,7 +26,7 @@ class RightMenu extends HTMLElement {
             <h1 class="newTwitter">New on twitter?</h1>
             <p class="rightMenuText responsiveHide">Sign up now to obtain your own customized page.</p>
             <button id="createAccount" class="rightMenuButton">Create An Account</button>
-            <p class="rightMenuText">If you already have an account, <a href="">Log In</a>.</p>
+            <p class="rightMenuText">If you already have an account, <a id="logInButton" class="logIn">Log In</a>.</p>
             <p class="rightMenuText responsiveHide">When you register, you are accepting our Terms and Services and our Privacy Policy, including the politics of Cookie Usage</p>
         </section>
         `

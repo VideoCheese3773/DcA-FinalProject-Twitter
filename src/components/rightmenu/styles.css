@@ -13,6 +13,11 @@
     border-style: none;
 }
 
+.logIn{
+    color: rgb(0, 89, 255);
+    text-decoration: underline;
+}
+
 @media all and (max-width:930px){
     .rightMenuSection{
         border-style: solid;
