@@ -1,0 +1,57 @@
+.leftMenuSection {
+    width: 100%;
+}
+
+.leftMenuItem {
+    display: flex;
+    align-items: center;
+    gap: 6%;
+}
+
+.menuIcon {
+    height: 25px;
+}
+
+.leftMenuText {
+    color: rgb(129, 129, 129);
+}
+
+.selectedItem {
+    color: #FFFFFF;
+}
+
+@media all and (max-width:930px){
+    .leftMenuSection {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #2e2e2e;
+        position: fixed;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        bottom: 0;
+    }
+
+    .leftMenuItem {
+        display: flex;
+        align-items: center;
+        gap: 6%;
+    }
+
+    .menuIcon {
+        height: 25px;
+        background-color: #2e2e2e;
+    }
+
+    .leftMenuText {
+        display: none;
+        color: rgb(129, 129, 129);
+    }
+
+    .selectedItem {
+        color: #FFFFFF;
+    }
+}
+
+/*EXISTE OTRO TAG QUE ES left-menu PARA EL ELEMENTO HTML QUE NO ESTA AQUI Y TIENE
+QUE SER PUESTO EN UN CSS MAYOR EN EL SCREEN*/
