@@ -32,7 +32,7 @@ class SignUp extends HTMLElement {
                 <input class="input" type="password" placeholder="Password"></input>
                 <input class="input" type="password" placeholder="Confirm Password"></input>
                 <button class="button">Sign Up</button>
-                <p>If you already have an account, <a class="logIn">log in.</a></p>
+                <p>If you already have an account, <a id="logInButton" class="logIn">log in.</a></p>
             </div>
         </section>
         `
