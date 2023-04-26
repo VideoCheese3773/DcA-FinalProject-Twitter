@@ -3,6 +3,7 @@ import RightMenu from "../components/rightmenu/rightmenu";
 import LeftMenu from "../components/leftmenu/leftmenu";
 import  SearchBar from "../components/searchbar/searchbar";
 import postList from "../mocks/getPosts";
+import styles from "./styles.css"
 
 class Dashboard extends HTMLElement {
     showP:Post[]=[];
@@ -33,23 +34,33 @@ class Dashboard extends HTMLElement {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = ``;
 
+            const container=this.ownerDocument.createElement("section")
+            container.setAttribute("id","container")
+
+            const css = this.ownerDocument.createElement("style");
+            css.innerHTML = styles;
+            this.shadowRoot?.appendChild(css);
+
             const search=this.ownerDocument.createElement("search-bar") as SearchBar
 
             const right=this.ownerDocument.createElement("right-menu") as RightMenu
 
             const mid=this.ownerDocument.createElement("section")
-            mid.setAttribute("id","mid")
+            mid.setAttribute("id","mid-menu")
 
             const left=this.ownerDocument.createElement("left-menu") as LeftMenu
+
+            mid.appendChild(search)
 
             this.showP.forEach((p) => {
                 mid.appendChild(p);
             });
 
-            this.shadowRoot.appendChild(search)
-            this.shadowRoot.appendChild(right)
-            this.shadowRoot.appendChild(mid)
-            this.shadowRoot.appendChild(left)
+            
+            container.appendChild(left)
+            container.appendChild(mid)
+            container.appendChild(right)
+            this.shadowRoot.appendChild(container)
             
 
         }

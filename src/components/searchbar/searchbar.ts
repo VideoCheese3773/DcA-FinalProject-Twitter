@@ -21,8 +21,8 @@ export default class SearchBar extends HTMLElement{
                <link rel="stylesheet" href="./index.css">
                <section class="searchCont">
                <input id="search" type="text" placeholder="Search...">
-               <img src="./img/lupe.png" class="searchIcon">
-               <img src="./img/cogAlt.png" class="searchIcon">
+               <img src="/img/lupe.png" class="searchIcon">
+               <img src="/img/cogAlt.png" class="searchIcon">
                </section>
               `;
             }
