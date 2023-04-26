@@ -1,6 +1,6 @@
 import styles from "./styles.css"
 
-class SignUp extends HTMLElement {
+class LogIn extends HTMLElement {
 
     constructor() {
         super();
@@ -37,5 +37,5 @@ class SignUp extends HTMLElement {
     }
 }
 
-customElements.define('sign-up', SignUp)
-export default SignUp
+customElements.define('log-in', LogIn)
+export default LogIn

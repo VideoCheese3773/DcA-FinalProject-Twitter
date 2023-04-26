@@ -25,6 +25,7 @@ left-menu {
     border-width: 1px;
     border-color: rgb(126, 126, 126);
     width: 35%;
+    border-radius: 20px;
 }
 
 right-menu {
