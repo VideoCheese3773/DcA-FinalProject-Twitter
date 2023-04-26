@@ -65,7 +65,11 @@ class Dashboard extends HTMLElement {
             container.appendChild(signUp)
             this.shadowRoot.appendChild(container)
 
-
+            const popUpMaster = signUp.shadowRoot?.getElementById("popUpMaster")
+            const createAccount = right.shadowRoot?.getElementById("createAccount")
+            createAccount?.addEventListener('click', ()=>{
+                popUpMaster?.classList.remove("noShow")
+            })
         }
     }
 }
