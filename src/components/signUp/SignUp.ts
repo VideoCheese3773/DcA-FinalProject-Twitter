@@ -16,25 +16,32 @@ class SignUp extends HTMLElement {
     render() {
         this.shadowRoot!.innerHTML = ``
 
-        const css = this.ownerDocument.createElement("styles");
+        const css = this.ownerDocument.createElement("style");
         css.innerHTML = styles;
         this.shadowRoot?.appendChild(css);
 
         this.shadowRoot!.innerHTML += `
-        <link rel="stylesheet" href="./index.css">
-        <section>
-            <div>
-                <p>X</p>
-                <img src="./img/twitterLogo.png">
-                <h1>Sign Up On Twitter</h1>
-                <input type="text" placeholder="Username"></input>
-                <input type="password" placeholder="Password"></input>
-                <input type="password" placeholder="Confirm Password"></input>
-                <button>Sign Up</button>
-                <p>If you already have an account, <a>log in.</a></p>
+        <section id="popUpMaster" class="popUp noShow">
+            <div class="popUpBody">
+                <div class="closeButtonContainer">
+                    <p id="closePopUp">X</p>
+                </div>
+                <img src="/img/twitterLogo.png" class="menuIcon">
+                <h1 class="banner">Sign Up On Twitter</h1>
+                <input class="input" type="text" placeholder="Username"></input>
+                <input class="input" type="password" placeholder="Password"></input>
+                <input class="input" type="password" placeholder="Confirm Password"></input>
+                <button class="button">Sign Up</button>
+                <p>If you already have an account, <a class="logIn">log in.</a></p>
             </div>
         </section>
         `
+
+        const popUpMaster = this.shadowRoot!.getElementById('popUpMaster')
+        const closePopUp = this.shadowRoot!.getElementById('closePopUp')
+        closePopUp?.addEventListener('click', () =>{
+            popUpMaster?.classList.add("noShow")
+        })
     }
 }
 

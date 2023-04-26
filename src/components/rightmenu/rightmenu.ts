@@ -30,6 +30,8 @@ class RightMenu extends HTMLElement {
             <p class="rightMenuText responsiveHide">When you register, you are accepting our Terms and Services and our Privacy Policy, including the politics of Cookie Usage</p>
         </section>
         `
+        const popUpMaster = this.ownerDocument
+        console.log("cringe",popUpMaster)
     }
 }
 

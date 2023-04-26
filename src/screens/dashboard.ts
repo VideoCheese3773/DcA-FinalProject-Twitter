@@ -1,7 +1,8 @@
 import Post,{postProps} from "../components/post/post";
 import RightMenu from "../components/rightmenu/rightmenu";
 import LeftMenu from "../components/leftmenu/leftmenu";
-import  SearchBar from "../components/searchbar/searchbar";
+import SearchBar from "../components/searchbar/searchbar";
+import SignUp from "../components/signUp/SignUp"
 import postList from "../mocks/getPosts";
 import styles from "./styles.css"
 
@@ -11,7 +12,7 @@ class Dashboard extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: "open"})
-        
+
         postList.forEach((post:any)=>{
             const postCard=this.ownerDocument.createElement("app-post") as Post;
             postCard.setAttribute(postProps.userimg,post.userimg);
@@ -27,7 +28,7 @@ class Dashboard extends HTMLElement {
     }
 
     connectedCallback() {
-    this.render()        
+    this.render()
     }
 
     render() {
@@ -56,12 +57,14 @@ class Dashboard extends HTMLElement {
                 mid.appendChild(p);
             });
 
-            
+            const signUp = this.ownerDocument.createElement("sign-up");
+
             container.appendChild(left)
             container.appendChild(mid)
             container.appendChild(right)
+            container.appendChild(signUp)
             this.shadowRoot.appendChild(container)
-            
+
 
         }
     }
