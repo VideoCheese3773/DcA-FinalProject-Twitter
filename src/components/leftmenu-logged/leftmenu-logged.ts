@@ -23,23 +23,23 @@ class LeftMenuLogged extends HTMLElement {
         <link rel="stylesheet" href="./index.css">
         <section class="leftMenuSection">
             <div class="leftMenuItem">
-                <img src="./img/twitterLogo.png" class="menuIcon">
+                <img src="/img/twitterLogo.png" class="menuIcon">
                 <h1 class="leftMenuText selectedItem">Home</h1>
             </div>
             <div class="leftMenuItem">
-                <img src="./img/hashtag.png" class="menuIcon">
+                <img src="/img/hashtag.png" class="menuIcon">
                 <h1 class="leftMenuText">Explore</h1>
             </div>
             <div class="leftMenuItem">
-                <img src="./img/cog.png" class="menuIcon">
+                <img src="/img/cog.png" class="menuIcon">
                 <h1 class="leftMenuText">Configuration</h1>
             </div>
             <div class="leftMenuItem">
-                <img src="./img/cog.png" class="menuIcon">
+                <img src="/img/cog.png" class="menuIcon">
                 <h1 class="leftMenuText">Profile</h1>
             </div>
             <div class="leftMenuItem lower">
-                <img src="./img/cog.png" class="menuIcon">
+                <img src="/img/user.png" class="menuIcon">
                 <p class="leftMenuText">Username</p>
                 <p class="leftMenuText">@Username</p>
             </div>

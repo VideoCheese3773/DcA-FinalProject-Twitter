@@ -4,6 +4,7 @@ import LeftMenuLogged from "../../components/leftmenu-logged/leftmenu-logged";
 import SearchBar from "../../components/searchbar/searchbar";
 import postList from "../../mocks/getPosts";
 import styles from "./styles.css"
+import { PostBar } from "../../components/export";
 
 class DashboardLogged extends HTMLElement {
     showP: Post[] = [];
@@ -43,6 +44,8 @@ class DashboardLogged extends HTMLElement {
 
             const search = this.ownerDocument.createElement("search-bar") as SearchBar
 
+            const postbar = this.ownerDocument.createElement("post-bar") as PostBar
+
             const right = this.ownerDocument.createElement("right-menu") as RightMenu
 
             const mid = this.ownerDocument.createElement("section")
@@ -51,6 +54,7 @@ class DashboardLogged extends HTMLElement {
             const left = this.ownerDocument.createElement("left-menu-logged") as LeftMenuLogged
 
             mid.appendChild(search)
+            mid.appendChild(postbar)
 
             this.showP.forEach((p) => {
                 mid.appendChild(p);

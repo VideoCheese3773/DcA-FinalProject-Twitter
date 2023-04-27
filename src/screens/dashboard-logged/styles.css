@@ -47,7 +47,7 @@ right-menu {
         margin-left: 20%;
     }
 
-    left-menu {
+    left-menu-logged {
         width: 100%;
         position: fixed;
         top: 100%;
