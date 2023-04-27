@@ -35,13 +35,15 @@ class LeftMenuLogged extends HTMLElement {
                 <h1 class="leftMenuText">Configuration</h1>
             </div>
             <div class="leftMenuItem">
-                <img src="/img/cog.png" class="menuIcon">
+                <img src="/img/userIcon.png" class="menuIcon">
                 <h1 class="leftMenuText">Profile</h1>
             </div>
             <div class="leftMenuItem lower">
-                <img src="/img/user.png" class="menuIcon">
-                <p class="leftMenuText">Username</p>
-                <p class="leftMenuText">@Username</p>
+                <img src="/img/user.png" class="userIcon">
+                <div class="userInfo">
+                    <p id="username" class="leftMenuText">Username</p>
+                    <p id="usertag" class="leftMenuText">@Username</p>
+                </div>
             </div>
         </section>
         `

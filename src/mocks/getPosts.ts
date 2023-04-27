@@ -5,14 +5,13 @@ const postList:PostData[]=[
         userimg: "https://i.pinimg.com/564x/0d/06/c4/0d06c47be2206f3bf0ad8d5b52b3ac46.jpg",
         username: "Nakosume",
         usertag: "@nako_13",
-        message: `You know, maybe al this anxiety Im feeling right now might be jus an overreaction, but still, Im hella' scared of what the autcome will be.
-        
+        message: `You know, maybe al this anxiety Im feeling right now might be jus an overreaction, but still, Im hella' scared of what the outcome will be.
+
         So, it is what it is`,
         image:"https://i.pinimg.com/564x/0d/06/c4/0d06c47be2206f3bf0ad8d5b52b3ac46.jpg",
         comcount: "0",
         retcount: "0",
         likescount: "0",
-
     },
 
     {
@@ -25,8 +24,6 @@ const postList:PostData[]=[
         comcount: "0",
         retcount: "0",
         likescount: "0",
-
-
     },
 
     {
@@ -39,8 +36,6 @@ const postList:PostData[]=[
         comcount: "0",
         retcount: "0",
         likescount: "0",
-
-
     },
 
     {
@@ -52,9 +47,18 @@ const postList:PostData[]=[
         comcount: "0",
         retcount: "0",
         likescount: "0",
+    },
 
-
-    }
+    {
+        userimg: "https://i.pinimg.com/736x/00/31/68/003168c267d05e5fbc19ece470d54df9.jpg",
+        username: "not a neon user",
+        usertag: "@CertifiedNeonMain",
+        message: `obligatory Neon appretiation post #7`,
+        image:"https://i.pinimg.com/originals/9a/72/d1/9a72d1ec4d69ba8f99c62cc121b52865.jpg",
+        comcount: "0",
+        retcount: "0",
+        likescount: "0",
+    },
 ]
 
 export default postList;

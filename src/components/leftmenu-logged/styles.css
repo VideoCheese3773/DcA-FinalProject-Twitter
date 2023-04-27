@@ -20,6 +20,20 @@
     color: #FFFFFF;
 }
 
+.lower{
+    position: fixed;
+    bottom: 3%;
+}
+
+.userIcon{
+    height: 60px;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: column;
+}
+
 @media all and (max-width:930px){
     .leftMenuSection {
         width: 100%;

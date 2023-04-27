@@ -1,5 +1,5 @@
 import Post, { postProps } from "../../components/post/post";
-import RightMenu from "../../components/rightmenu/rightmenu";
+import RightMenuLogged from "../../components/rightmenu-logged/rightmenu-logged";
 import LeftMenuLogged from "../../components/leftmenu-logged/leftmenu-logged";
 import SearchBar from "../../components/searchbar/searchbar";
 import postList from "../../mocks/getPosts";
@@ -46,7 +46,7 @@ class DashboardLogged extends HTMLElement {
 
             const postbar = this.ownerDocument.createElement("post-bar") as PostBar
 
-            const right = this.ownerDocument.createElement("right-menu") as RightMenu
+            const right = this.ownerDocument.createElement("right-menu-logged") as RightMenuLogged
 
             const mid = this.ownerDocument.createElement("section")
             mid.setAttribute("id", "mid-menu")
