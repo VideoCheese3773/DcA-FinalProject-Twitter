@@ -23,6 +23,7 @@ class DashboardLogged extends HTMLElement {
             postCard.setAttribute(postProps.comcount, post.comcount);
             postCard.setAttribute(postProps.retcount, post.retcount);
             postCard.setAttribute(postProps.likescount, post.likescount);
+
             this.showP.push(postCard);
         })
     }
