@@ -1,34 +1,41 @@
 .rightMenuText {
-    color: rgb(129, 129, 129);
+color: rgb(129, 129, 129);
+}
+
+.rightMenuItem{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+gap: 10%;
+}
+
+.leftUser{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 10%;
 }
 
 .userIcon{
-    height: 40px;
+height: 40px;
+}
+
+.followButton{
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+font-size: 12pt;
+padding: 3% 6%;
+border-radius: 50px;
+border-style: none;
+}
+
+.userInfo{
+
 }
 
 @media all and (max-width:930px){
-    .rightMenuSection{
-        border-style: solid;
-        border-width: 2px;
-        border-color: rgb(126, 126, 126);
-        width: 70%;
-        padding-left: 20px;
-        padding-right: 20px;
-        border-radius: 20px;
-        position: fixed;
-        bottom: 10%;
-        left: center;
-    }
-
-    .rightMenuText {
-        color: rgb(129, 129, 129);
-    }
-
-    .newTwitter{
-        font-size: 150%;
-    }
-
-    .responsiveHide{
-        display: none;
-    }
+.rightMenuSection{
+display: none;
+}
 }

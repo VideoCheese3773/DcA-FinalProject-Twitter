@@ -21,21 +21,66 @@ class RightMenuLogged extends HTMLElement {
         this.shadowRoot?.appendChild(css);
 
         this.shadowRoot!.innerHTML += `
-        <link rel="stylesheet" href="./index.css">
         <section class="rightMenuSection">
             <h1 class="newTwitter">Who to follow?</h1>
             <div class="rightMenuItem">
-                <img src="/img/user.png" class="userIcon">
-                <div class="userInfo">
-                    <p id="username" class="leftMenuText">Username</p>
-                    <p id="usertag" class="leftMenuText">@Username</p>
+                <div class="leftUser">
+                    <img src="/img/user.png" class="userIcon">
+                    <div class="userInfo">
+                        <p id="username" class="leftMenuText">Username</p>
+                        <p id="usertag" class="leftMenuText">@Username</p>
+                    </div>
                 </div>
-                <p>Follow</p>
+                <button class="followButton">Follow</button>
+            </div>
+
+            <div class="rightMenuItem">
+                <div class="leftUser">
+                    <img src="/img/user.png" class="userIcon">
+                    <div class="userInfo">
+                        <p id="username" class="leftMenuText">Username</p>
+                        <p id="usertag" class="leftMenuText">@Username</p>
+                    </div>
+                </div>
+                <button class="followButton">Follow</button>
+            </div>
+
+            <div class="rightMenuItem">
+                <div class="leftUser">
+                    <img src="/img/user.png" class="userIcon">
+                    <div class="userInfo">
+                        <p id="username" class="leftMenuText">Username</p>
+                        <p id="usertag" class="leftMenuText">@Username</p>
+                    </div>
+                </div>
+                <button class="followButton">Follow</button>
+            </div>
+
+            <div class="rightMenuItem">
+                <div class="leftUser">
+                    <img src="/img/user.png" class="userIcon">
+                    <div class="userInfo">
+                        <p id="username" class="leftMenuText">Username</p>
+                        <p id="usertag" class="leftMenuText">@Username</p>
+                    </div>
+                </div>
+                <button class="followButton">Follow</button>
+            </div>
+
+            <div class="rightMenuItem">
+                <div class="leftUser">
+                    <img src="/img/user.png" class="userIcon">
+                    <div class="userInfo">
+                        <p id="username" class="leftMenuText">Username</p>
+                        <p id="usertag" class="leftMenuText">@Username</p>
+                    </div>
+                </div>
+                <button class="followButton">Follow</button>
             </div>
         </section>
         `
-    }
-}
+        }
+        }
 
 customElements.define('right-menu-logged', RightMenuLogged)
 export default RightMenuLogged
