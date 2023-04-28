@@ -64,13 +64,27 @@ export default class uBanner extends HTMLElement {
             userIco.setAttribute("id","profPic")
             userIco.setAttribute("src",this.userimg)
 
+            const bannnerContext=this.ownerDocument.createElement("section")
+            bannnerContext.setAttribute("id","contBox")
+
+            const button=this.ownerDocument.createElement("button")
+            button.setAttribute("id","contButton")
+            button.innerText="Follow"
+            button.addEventListener("click",()=>console.log("no no, don't touch me there"))
+
+
             //this.shadowRoot.appendChild(userIco)
-            container.append(userIco)
+            container.appendChild(userIco)
             container.innerHTML += `
                 <h2>${this.username}</h2>
                 <h3>${this.usertag}</h3>
                 <p>${this.userdesc}</p>
             `;
+            bannnerContext.appendChild(button)
+            container.appendChild(bannnerContext)
+
+
+
             this.shadowRoot.appendChild(container)
 
             
