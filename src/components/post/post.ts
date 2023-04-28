@@ -69,7 +69,7 @@ export default class Post extends HTMLElement {
             this.shadowRoot?.appendChild(css);
 
             this.shadowRoot.innerHTML += `
-                <section class="tagging">
+                <section class="tagging" id="tagging">
                     <img src="${this.userimg}" class="profPic">
                     <b>${this.username}</b>
                     ${this.usertag}
@@ -84,6 +84,9 @@ export default class Post extends HTMLElement {
                     <section class="contextB"><img src="/img/heart.png" class="contextIcon">${this.likescount}</section>
                 </section>
             `;
+
+            const tagaction=this.shadowRoot.getElementById("tagging")
+            tagaction?.addEventListener("click",()=>console.log(`going to ${this.usertag}'s profile`))
         }
     }
 }
