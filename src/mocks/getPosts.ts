@@ -53,7 +53,7 @@ const postList:PostData[]=[
         userimg: "https://i.pinimg.com/736x/00/31/68/003168c267d05e5fbc19ece470d54df9.jpg",
         username: "not a neon user",
         usertag: "@CertifiedNeonMain",
-        message: `obligatory Neon appretiation post #7`,
+        message: `obligatory Neon appretiation post #16977`,
         image:"https://i.pinimg.com/originals/9a/72/d1/9a72d1ec4d69ba8f99c62cc121b52865.jpg",
         comcount: "0",
         retcount: "0",
