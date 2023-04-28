@@ -18,7 +18,6 @@ export default class SearchBar extends HTMLElement{
             this.shadowRoot?.appendChild(css);
 
             this.shadowRoot.innerHTML+=`
-               <link rel="stylesheet" href="./index.css">
                <section class="searchCont">
                <input id="search" type="text" placeholder="Search...">
                <img src="/img/lupe.png" class="searchIcon">
