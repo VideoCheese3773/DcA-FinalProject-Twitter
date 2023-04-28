@@ -79,9 +79,9 @@ export default class Post extends HTMLElement {
                     <img src="${this.image}" class="postPic">
                 </section>
                 <section class="context-bar">
-                    <div class="contextB"><img src="/img/comment.png" class="contextIcon">${this.comcount}</div>
-                    <div class="contextB"><img src="/img/retweet.png" class="contextIcon">${this.retcount}</div>
-                    <div class="contextB"><img src="/img/heart.png" class="contextIcon">${this.likescount}</div>
+                    <section class="contextB"><img src="/img/comment.png" class="contextIcon">${this.comcount}</section>
+                    <section class="contextB"><img src="/img/retweet.png" class="contextIcon">${this.retcount}</section>
+                    <section class="contextB"><img src="/img/heart.png" class="contextIcon">${this.likescount}</section>
                 </section>
             `;
         }

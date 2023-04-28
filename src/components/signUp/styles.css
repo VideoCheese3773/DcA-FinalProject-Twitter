@@ -55,6 +55,7 @@
     height: 40px;
     border-radius: 100px;
     border: 2px solid;
+    cursor: pointer;
 }
 
 .logIn{

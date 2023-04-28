@@ -28,6 +28,7 @@ font-size: 12pt;
 padding: 3% 6%;
 border-radius: 50px;
 border-style: none;
+cursor: pointer;
 }
 
 .userInfo{
