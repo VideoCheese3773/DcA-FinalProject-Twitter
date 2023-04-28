@@ -34,7 +34,7 @@
 
 .context-bar {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     padding-left: 13%;
     padding-bottom: 4%;
 }
