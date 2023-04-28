@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     gap: 6%;
+    cursor: pointer;
 }
 
 .menuIcon {

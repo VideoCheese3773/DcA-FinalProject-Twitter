@@ -29,6 +29,7 @@
     background-color: rgb(29, 155, 240);
     font-weight: 500;
     border-style: none;
+    cursor: pointer;
 }
 
 .up-bar{
