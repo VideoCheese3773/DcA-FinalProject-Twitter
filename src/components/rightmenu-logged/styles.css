@@ -30,10 +30,6 @@ border-radius: 50px;
 border-style: none;
 }
 
-.userInfo{
-
-}
-
 @media all and (max-width:930px){
 .rightMenuSection{
 display: none;

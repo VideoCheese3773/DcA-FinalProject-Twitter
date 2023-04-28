@@ -2,6 +2,7 @@ import Post, { postProps } from "../../components/post/post";
 import RightMenuLogged from "../../components/rightmenu-logged/rightmenu-logged";
 import LeftMenuLogged from "../../components/leftmenu-logged/leftmenu-logged";
 import SearchBar from "../../components/searchbar/searchbar";
+import UserConfig from "../../components/user-config/UserConfig";
 import postList from "../../mocks/getPosts";
 import styles from "./styles.css"
 import { PostBar } from "../../components/export";
@@ -62,10 +63,21 @@ class DashboardProfile extends HTMLElement {
                 mid.appendChild(p);
             });
 
+            const userConfig = this.ownerDocument.createElement("user-config") as UserConfig
+
             container.appendChild(left)
             container.appendChild(mid)
             container.appendChild(right)
+            container.appendChild(userConfig)
             this.shadowRoot.appendChild(container)
+
+            const configButton = left.shadowRoot?.getElementById("configMenuButton")
+            const configMenu = userConfig.shadowRoot?.getElementById("popUpMaster")
+
+            //show user config
+            configButton?.addEventListener('click', () => {
+                configMenu?.classList.remove("noShow")
+            })
         }
     }
 }

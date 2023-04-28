@@ -30,7 +30,7 @@ class LeftMenuLogged extends HTMLElement {
                 <img src="/img/hashtag.png" class="menuIcon">
                 <h1 class="leftMenuText">Explore</h1>
             </div>
-            <div class="leftMenuItem">
+            <div class="leftMenuItem" id="configMenuButton">
                 <img src="/img/cog.png" class="menuIcon">
                 <h1 class="leftMenuText">Configuration</h1>
             </div>
