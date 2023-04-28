@@ -65,6 +65,10 @@
     .selectedItem {
         color: #FFFFFF;
     }
+
+    .userIcon{
+        display: none;
+    }
 }
 
 /*EXISTE OTRO TAG QUE ES left-menu PARA EL ELEMENTO HTML QUE NO ESTA AQUI Y TIENE
