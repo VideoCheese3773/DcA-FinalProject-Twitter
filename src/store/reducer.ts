@@ -1,4 +1,4 @@
-import { Actions, AppState, NavigationActions } from "../types/store";
+import { Actions, AppState, NavigationActions,PostActions } from "../types/store";
 
 export const reducer = (
     currentAction: Actions,
@@ -12,6 +12,21 @@ export const reducer = (
                 ...currentState,
                 screen: payload,
             };
+
+        case PostActions.ADD:
+            return {
+                ...currentState,
+                posts: [
+                    payload,
+                    ...currentState.posts,
+                ]
+            }
+
+        case PostActions.GET:
+            return {
+                ...currentState,
+                posts: payload
+            }
 
         default:
             return currentState;

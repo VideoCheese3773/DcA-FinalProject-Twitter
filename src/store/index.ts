@@ -3,7 +3,8 @@ import { Actions, AppState, Observer, Screens } from "../types/store";
 import { reducer } from "./reducer";
 
 const emptyState: AppState = {
-    screen: Screens.DASHBOARD
+    screen: Screens.DASHBOARD,
+    posts:[],
 };
 
 export let appState = Storage.get<AppState>({

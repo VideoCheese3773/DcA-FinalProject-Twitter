@@ -1,5 +1,7 @@
 export type Observer = { render: () => void } & HTMLElement;
 
+import { PostData } from "./posts";
+
 export enum Screens {
     LOGGED = "LOGGED",
     PROFILE = "PROFILE",
@@ -7,11 +9,17 @@ export enum Screens {
 }
 
 export type AppState = {
-    screen: Screens;
+    screen: Screens,
+    posts:PostData[],
 };
 
 export enum NavigationActions {
     "NAVIGATE" = "NAVIGATE",
+}
+
+export enum PostActions {
+    "ADD" = "ADD",
+    "GET" = "GET",
 }
 
 export interface NavigateAction {
@@ -19,4 +27,14 @@ export interface NavigateAction {
     payload: Screens;
 }
 
-export type Actions = NavigateAction;
+export interface AddPostAction {
+    action: PostActions.ADD,
+    payload: PostData
+}
+
+export interface GetPostAction {
+    action: PostActions.GET,
+    payload: PostData[]
+}
+
+export type Actions = NavigateAction|AddPostAction|GetPostAction;

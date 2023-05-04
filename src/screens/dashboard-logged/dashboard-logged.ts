@@ -6,8 +6,8 @@ import SearchBar from "../../components/searchbar/searchbar";
 import {postList} from "../../mocks/getPosts";
 import styles from "./styles.css"
 import { PostBar } from "../../components/export";
-import { navigate } from "../../store/actions"
-import { dispatch } from "../../store/index";
+import { navigate,getPosts } from "../../store/actions"
+import { dispatch,addObserver,appState } from "../../store/index";
 import { Screens } from "../../types/store";
 
 class DashboardLogged extends HTMLElement {
@@ -17,7 +17,9 @@ class DashboardLogged extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" })
 
-        postList.forEach((post: any) => {
+
+
+        /* postList.forEach((post: any) => {
             const postCard = this.ownerDocument.createElement("app-post") as Post;
             postCard.setAttribute(postProps.userimg, post.userimg);
             postCard.setAttribute(postProps.username, post.username);
@@ -29,16 +31,36 @@ class DashboardLogged extends HTMLElement {
             postCard.setAttribute(postProps.likescount, post.likescount);
 
             this.showP.push(postCard);
-        })
+        }) */
     }
 
-    connectedCallback() {
-        this.render()
+    async connectedCallback() {
+      if (appState.posts.length === 0) {
+        const action = await getPosts();
+        dispatch(action);
+      } else {
+        this.render();
+      }
     }
 
     render() {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = ``;
+
+            appState.posts.forEach((post: any) => {
+                const postCard = this.ownerDocument.createElement("app-post") as Post;
+                postCard.setAttribute(postProps.userimg, post.userimg);
+                postCard.setAttribute(postProps.username, post.username);
+                postCard.setAttribute(postProps.usertag, post.usertag);
+                postCard.setAttribute(postProps.message, post.message);
+                postCard.setAttribute(postProps.image, post.image);
+                postCard.setAttribute(postProps.comcount, post.comcount);
+                postCard.setAttribute(postProps.retcount, post.retcount);
+                postCard.setAttribute(postProps.likescount, post.likescount);
+                console.log("yippi")
+    
+                this.showP.push(postCard);
+            })
 
             const container = this.ownerDocument.createElement("section")
             container.setAttribute("id", "container")
