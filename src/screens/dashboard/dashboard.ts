@@ -6,6 +6,9 @@ import SignUp from "../../components/signUp/SignUp"
 import LogIn from "../../components/LogIn/logIn"
 import {postList} from "../../mocks/getPosts";
 import styles from "./styles.css"
+import { navigate } from "../../store/actions"
+import { dispatch } from "../../store/index";
+import { Screens } from "../../types/store";
 
 class Dashboard extends HTMLElement {
     showP: Post[] = [];
@@ -71,9 +74,11 @@ class Dashboard extends HTMLElement {
             const popUpMasterSignUp = signUp.shadowRoot?.getElementById("popUpMaster")
             const popUpMasterLogIn = logIn.shadowRoot?.getElementById("popUpMaster")
             const createAccount = right.shadowRoot?.getElementById("createAccount")
-            const logInButton = right.shadowRoot?.getElementById("logInButton")
+            const logToAccount = right.shadowRoot?.getElementById("logInButton")
             const switchLogIn = signUp.shadowRoot?.getElementById("logInButton")
             const switchSignUp = logIn.shadowRoot?.getElementById("signUpButton")
+            const signUpButton = signUp.shadowRoot?.getElementById("signUpButton")
+            const logInButton = logIn.shadowRoot?.getElementById("logInButton")
 
             //show sign up
             createAccount?.addEventListener('click', () => {
@@ -81,7 +86,7 @@ class Dashboard extends HTMLElement {
             })
 
             //show log in
-            logInButton?.addEventListener('click', () => {
+            logToAccount?.addEventListener('click', () => {
                 popUpMasterLogIn?.classList.remove("noShow")
             })
 
@@ -95,6 +100,16 @@ class Dashboard extends HTMLElement {
             switchSignUp?.addEventListener('click', () => {
                 popUpMasterLogIn?.classList.add("noShow")
                 popUpMasterSignUp?.classList.remove("noShow")
+            })
+
+            //switch to logged screen
+            signUpButton?.addEventListener('click', () => {
+                console.log("moving to logged screen")
+                dispatch(navigate(Screens.LOGGED))
+            })
+            logInButton?.addEventListener('click', () => {
+                console.log("moving to logged screen")
+                dispatch(navigate(Screens.LOGGED))
             })
         }
     }

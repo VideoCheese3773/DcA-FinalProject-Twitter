@@ -31,7 +31,7 @@ class SignUp extends HTMLElement {
                 <input class="input" type="text" placeholder="Username"></input>
                 <input class="input" type="password" placeholder="Password"></input>
                 <input class="input" type="password" placeholder="Confirm Password"></input>
-                <button class="button">Sign Up</button>
+                <button class="button" id="signUpButton">Sign Up</button>
                 <p>If you already have an account, <a id="logInButton" class="logIn">log in.</a></p>
             </div>
         </section>
