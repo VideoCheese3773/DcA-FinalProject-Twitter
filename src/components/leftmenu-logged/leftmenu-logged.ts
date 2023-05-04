@@ -22,7 +22,7 @@ class LeftMenuLogged extends HTMLElement {
         this.shadowRoot!.innerHTML += `
         <link rel="stylesheet" href="./index.css">
         <section class="leftMenuSection">
-            <div class="leftMenuItem">
+            <div class="leftMenuItem" id="homeButton">
                 <img src="/img/twitterLogo.png" class="menuIcon">
                 <h1 class="leftMenuText selectedItem">Home</h1>
             </div>
@@ -34,7 +34,7 @@ class LeftMenuLogged extends HTMLElement {
                 <img src="/img/cog.png" class="menuIcon">
                 <h1 class="leftMenuText">Configuration</h1>
             </div>
-            <div class="leftMenuItem">
+            <div class="leftMenuItem" id="profileButton">
                 <img src="/img/userIcon.png" class="menuIcon">
                 <h1 class="leftMenuText">Profile</h1>
             </div>

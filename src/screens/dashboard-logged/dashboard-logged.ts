@@ -6,6 +6,9 @@ import SearchBar from "../../components/searchbar/searchbar";
 import {postList} from "../../mocks/getPosts";
 import styles from "./styles.css"
 import { PostBar } from "../../components/export";
+import { navigate } from "../../store/actions"
+import { dispatch } from "../../store/index";
+import { Screens } from "../../types/store";
 
 class DashboardLogged extends HTMLElement {
     showP: Post[] = [];
@@ -72,11 +75,17 @@ class DashboardLogged extends HTMLElement {
 
             const configButton = left.shadowRoot?.getElementById("configMenuButton")
             const configMenu = userConfig.shadowRoot?.getElementById("popUpMaster")
+            const profileButton = left.shadowRoot?.getElementById("profileButton")
 
             //show user config
             configButton?.addEventListener('click', () => {
-                console.log("pog")
                 configMenu?.classList.remove("noShow")
+            })
+
+            //switch to profile screen
+            profileButton?.addEventListener('click', () => {
+                console.log("moving to profile screen")
+                dispatch(navigate(Screens.PROFILE))
             })
         }
     }

@@ -6,6 +6,9 @@ import UserConfig from "../../components/user-config/UserConfig";
 import {postList} from "../../mocks/getPosts";
 import styles from "./styles.css"
 import { PostBar } from "../../components/export";
+import { dispatch } from "../../store/index";
+import { navigate } from "../../store/actions";
+import { Screens } from "../../types/store";
 
 class DashboardProfile extends HTMLElement {
     showP: Post[] = [];
@@ -73,10 +76,17 @@ class DashboardProfile extends HTMLElement {
 
             const configButton = left.shadowRoot?.getElementById("configMenuButton")
             const configMenu = userConfig.shadowRoot?.getElementById("popUpMaster")
+            const homeButton = left.shadowRoot?.getElementById("homeButton")
 
             //show user config
             configButton?.addEventListener('click', () => {
                 configMenu?.classList.remove("noShow")
+            })
+
+            //switch to home screen
+            homeButton?.addEventListener('click', () => {
+                console.log("moving to home screen")
+                dispatch(navigate(Screens.LOGGED))
             })
         }
     }
