@@ -4,7 +4,7 @@ import LeftMenu from "../../components/leftmenu/leftmenu";
 import SearchBar from "../../components/searchbar/searchbar";
 import SignUp from "../../components/signUp/SignUp"
 import LogIn from "../../components/LogIn/logIn"
-import postList from "../../mocks/getPosts";
+import {postList} from "../../mocks/getPosts";
 import styles from "./styles.css"
 
 class Dashboard extends HTMLElement {

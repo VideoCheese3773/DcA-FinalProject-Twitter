@@ -1,6 +1,6 @@
 import {PostData} from "../types/posts"
 
-const postList:PostData[]=[
+export const postList:PostData[]=[
     {
         userimg: "https://i.pinimg.com/564x/0d/06/c4/0d06c47be2206f3bf0ad8d5b52b3ac46.jpg",
         username: "Nakosume",
@@ -60,5 +60,3 @@ const postList:PostData[]=[
         likescount: "0",
     },
 ]
-
-export default postList;

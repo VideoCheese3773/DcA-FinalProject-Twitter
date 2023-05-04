@@ -3,7 +3,7 @@ import RightMenuLogged from "../../components/rightmenu-logged/rightmenu-logged"
 import LeftMenuLogged from "../../components/leftmenu-logged/leftmenu-logged";
 import UserConfig from "../../components/user-config/UserConfig";
 import SearchBar from "../../components/searchbar/searchbar";
-import postList from "../../mocks/getPosts";
+import {postList} from "../../mocks/getPosts";
 import styles from "./styles.css"
 import { PostBar } from "../../components/export";
 
