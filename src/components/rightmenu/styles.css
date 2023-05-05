@@ -1,0 +1,58 @@
+.rightMenuText {
+    color: rgb(129, 129, 129);
+}
+
+.rightMenuButton {
+    width: 100%;
+    border-radius: 50px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: rgb(180, 180, 180);
+    font-weight: 800;
+    color: #000000;
+    border-style: none;
+    cursor: pointer;
+}
+
+.logIn{
+    color: rgb(0, 89, 255);
+    text-decoration: underline;
+}
+
+@media all and (max-width:930px){
+    .rightMenuSection{
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(126, 126, 126);
+        width: 70%;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+        position: fixed;
+        bottom: 10%;
+        left: center;
+    }
+
+    .rightMenuText {
+        color: rgb(129, 129, 129);
+    }
+
+    .rightMenuButton {
+        width: 100%;
+        border-radius: 50px;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        background-color: rgb(180, 180, 180);
+        font-weight: 800;
+        color: #000000;
+        border-style: none;
+    }
+
+    .newTwitter{
+        font-size: 150%;
+    }
+
+    .responsiveHide{
+        display: none;
+    }
+}

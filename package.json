@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/VideoCheese3773/DcA-FinalProject-Twitter#readme",
   "devDependencies": {
+    "css-loader": "^6.7.3",
     "serve": "^14.2.0",
-    "webpack": "^5.75.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.2",
+    "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1"
   }
 }

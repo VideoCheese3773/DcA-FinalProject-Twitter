@@ -1,0 +1,38 @@
+.rightMenuText {
+color: rgb(129, 129, 129);
+}
+
+.rightMenuItem{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+gap: 10%;
+}
+
+.leftUser{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 10%;
+}
+
+.userIcon{
+height: 40px;
+}
+
+.followButton{
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+font-size: 12pt;
+padding: 3% 6%;
+border-radius: 50px;
+border-style: none;
+cursor: pointer;
+}
+
+@media all and (max-width:930px){
+.rightMenuSection{
+display: none;
+}
+}

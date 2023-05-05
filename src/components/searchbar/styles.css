@@ -1,0 +1,42 @@
+*{
+    color: aliceblue;
+}
+
+.searchCont {
+    margin: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-width: 1px;
+    border-color: aliceblue;
+}
+
+.searchIcon {
+    width: 5%;
+    height: 5%;
+    cursor: pointer;
+}
+
+#search {
+    width: 70%;
+    background-color: rgb(32, 47, 54);
+    border: none;
+    border-radius: 15px;
+    padding: 1% 3%;
+}
+
+@media all and (max-width:930px) {
+    .searchIcon {
+        width: 7%;
+        height: 7%;
+    }
+
+    #search {
+        width: 70%;
+        background-color: rgb(32, 47, 54);
+        border: none;
+        border-radius: 15px;
+        padding: 1%;
+    }
+}
