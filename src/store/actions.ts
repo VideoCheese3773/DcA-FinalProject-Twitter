@@ -16,7 +16,7 @@ export const getPosts = async (): Promise<GetPostAction> => {
     }
 }
 
-export const addNewTrip = ({payload}: Pick<AddPostAction, "payload">): AddPostAction => {
+export const addNewPost = ({payload}: Pick<AddPostAction, "payload">): AddPostAction => {
     return {
         action: PostActions.ADD,
         payload
