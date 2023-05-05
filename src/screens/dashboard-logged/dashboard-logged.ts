@@ -6,8 +6,8 @@ import SearchBar from "../../components/searchbar/searchbar";
 //import {postList} from "../../mocks/getPosts";
 import styles from "./styles.css"
 import { PostBar } from "../../components/export";
-import { navigate,getPosts,addNewPost } from "../../store/actions"
-import { dispatch,addObserver,appState } from "../../store/index";
+import { navigate, getPosts, addNewPost } from "../../store/actions"
+import { dispatch, addObserver, appState } from "../../store/index";
 import { Screens } from "../../types/store";
 
 class DashboardLogged extends HTMLElement {
@@ -35,12 +35,12 @@ class DashboardLogged extends HTMLElement {
     }
 
     async connectedCallback() {
-      if (appState.posts.length === 0) {
-        const action = await getPosts();
-        dispatch(action);
-      } else {
-        this.render();
-      }
+        if (appState.posts.length === 0) {
+            const action = await getPosts();
+            dispatch(action);
+        } else {
+            this.render();
+        }
     }
 
     render() {
@@ -58,7 +58,7 @@ class DashboardLogged extends HTMLElement {
                 postCard.setAttribute(postProps.retcount, post.retcount);
                 postCard.setAttribute(postProps.likescount, post.likescount);
                 console.log("yippi")
-    
+
                 this.showP.push(postCard);
             })
 
@@ -95,25 +95,25 @@ class DashboardLogged extends HTMLElement {
             container.appendChild(userConfig)
             this.shadowRoot.appendChild(container)
 
-            const textpost=postbar.shadowRoot?.getElementById("inputBar") as HTMLInputElement
-            const postapost= postbar.shadowRoot?.getElementById("postButton")
+            const textpost = postbar.shadowRoot?.getElementById("inputBar") as HTMLInputElement
+            const postapost = postbar.shadowRoot?.getElementById("postButton")
             const configButton = left.shadowRoot?.getElementById("configMenuButton")
             const configMenu = userConfig.shadowRoot?.getElementById("popUpMaster")
             const profileButton = left.shadowRoot?.getElementById("profileButton")
 
             //make a post
-            postapost?.addEventListener('click',()=>{
+            postapost?.addEventListener('click', () => {
                 dispatch(
                     addNewPost({
-                        payload:{
-                            userimg:"/img/user.png",
-                            username:"Username",
-                            usertag:"@username_1",
-                            message:textpost.value,
-                            image:"https://pbs.twimg.com/media/FeOm9aUaMAIKm8H?format=jpg&name=4096x4096",
-                            comcount:"0",
-                            retcount:"0",
-                            likescount:"0",
+                        payload: {
+                            userimg: "/img/user.png",
+                            username: "Username",
+                            usertag: "@username_1",
+                            message: textpost.value,
+                            image: "https://pbs.twimg.com/media/FeOm9aUaMAIKm8H?format=jpg&name=4096x4096",
+                            comcount: "0",
+                            retcount: "0",
+                            likescount: "0",
                         }
                     })
                 )
