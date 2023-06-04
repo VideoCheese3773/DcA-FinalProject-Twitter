@@ -1,5 +1,6 @@
-import { NavigateAction, NavigationActions, Screens,PostActions,GetPostAction,AddPostAction } from "../types/store";
+import { NavigateAction, NavigationActions, Screens,PostActions,GetPostAction,AddPostAction, Actions } from "../types/store";
 import PostsService from '../services/Posts'
+import firebase from "../utils/firebase";
 
 export const navigate = (screen: Screens): NavigateAction => {
     return {
@@ -9,14 +10,16 @@ export const navigate = (screen: Screens): NavigateAction => {
 };
 
 export const getPosts = async (): Promise<GetPostAction> => {
-    const posts = await PostsService.get();
+    //const posts = await PostsService.get();
+    const posts =await firebase.getPostFromDB();
     return {
         action: PostActions.GET,
         payload: posts
     }
 }
 
-export const addNewPost = ({payload}: Pick<AddPostAction, "payload">): AddPostAction => {
+export const addNewPost = async ({payload}: Pick<AddPostAction, "payload">): Promise <Actions> => {
+    await firebase.postDB(payload);
     return {
         action: PostActions.ADD,
         payload

@@ -3,7 +3,6 @@ import RightMenuLogged from "../../components/rightmenu-logged/rightmenu-logged"
 import LeftMenuLogged from "../../components/leftmenu-logged/leftmenu-logged";
 import UserConfig from "../../components/user-config/UserConfig";
 import SearchBar from "../../components/searchbar/searchbar";
-//import {postList} from "../../mocks/getPosts";
 import styles from "./styles.css"
 import { PostBar } from "../../components/export";
 import { navigate,getPosts,addNewPost } from "../../store/actions"
@@ -16,22 +15,7 @@ class DashboardLogged extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" })
-
-
-
-        /* postList.forEach((post: any) => {
-            const postCard = this.ownerDocument.createElement("app-post") as Post;
-            postCard.setAttribute(postProps.userimg, post.userimg);
-            postCard.setAttribute(postProps.username, post.username);
-            postCard.setAttribute(postProps.usertag, post.usertag);
-            postCard.setAttribute(postProps.message, post.message);
-            postCard.setAttribute(postProps.image, post.image);
-            postCard.setAttribute(postProps.comcount, post.comcount);
-            postCard.setAttribute(postProps.retcount, post.retcount);
-            postCard.setAttribute(postProps.likescount, post.likescount);
-
-            this.showP.push(postCard);
-        }) */
+        addObserver(this);
     }
 
     async connectedCallback() {
@@ -102,18 +86,18 @@ class DashboardLogged extends HTMLElement {
             const profileButton = left.shadowRoot?.getElementById("profileButton")
 
             //make a post
-            postapost?.addEventListener('click',()=>{
+            postapost?.addEventListener('click',async ()=>{
                 dispatch(
-                    addNewPost({
-                        payload:{
-                            userimg:"/img/user.png",
-                            username:"Username",
-                            usertag:"@username_1",
-                            message:textpost.value,
-                            image:"https://pbs.twimg.com/media/FeOm9aUaMAIKm8H?format=jpg&name=4096x4096",
-                            comcount:"0",
-                            retcount:"0",
-                            likescount:"0",
+                    await addNewPost({
+                        payload: {
+                            userimg: "/img/user.png",
+                            username: "Username",
+                            usertag: "@username_1",
+                            message: textpost.value,
+                            image: "https://pbs.twimg.com/media/FeOm9aUaMAIKm8H?format=jpg&name=4096x4096",
+                            comcount: "0",
+                            retcount: "0",
+                            likescount: "0",
                         }
                     })
                 )
