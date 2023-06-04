@@ -4,7 +4,6 @@ import LeftMenu from "../../components/leftmenu/leftmenu";
 import SearchBar from "../../components/searchbar/searchbar";
 import SignUp from "../../components/signUp/SignUp"
 import LogIn from "../../components/LogIn/logIn"
-//import {postList} from "../../mocks/getPosts";
 import styles from "./styles.css"
 import { getPosts, navigate } from "../../store/actions"
 import { appState, dispatch } from "../../store/index";
@@ -16,28 +15,15 @@ class Dashboard extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" })
-
-        /* postList.forEach((post: any) => {
-            const postCard = this.ownerDocument.createElement("app-post") as Post;
-            postCard.setAttribute(postProps.userimg, post.userimg);
-            postCard.setAttribute(postProps.username, post.username);
-            postCard.setAttribute(postProps.usertag, post.usertag);
-            postCard.setAttribute(postProps.message, post.message);
-            postCard.setAttribute(postProps.image, post.image);
-            postCard.setAttribute(postProps.comcount, post.comcount);
-            postCard.setAttribute(postProps.retcount, post.retcount);
-            postCard.setAttribute(postProps.likescount, post.likescount);
-            this.showP.push(postCard);
-        }) */
     }
 
     async connectedCallback() {
         if (appState.posts.length === 0) {
-        const action = await getPosts();
-        dispatch(action);
-      } else {
-        this.render();
-      }
+            const action = await getPosts();
+            dispatch(action);
+        } else {
+            this.render();
+        }
     }
 
     render() {
@@ -55,7 +41,7 @@ class Dashboard extends HTMLElement {
                 postCard.setAttribute(postProps.retcount, post.retcount);
                 postCard.setAttribute(postProps.likescount, post.likescount);
                 console.log("yippi")
-    
+
                 this.showP.push(postCard);
             })
 
