@@ -2,9 +2,12 @@ import { initializeApp } from "firebase/app";
 import firebaseConfig from "../firebaseConfig";
 import { PostData } from "../types/posts";
 import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+import {createUserWithEmailAndPassword,getAuth,signInWithEmailAndPassword,setPersistence,browserSessionPersistence} from "firebase/auth";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
+const auth = getAuth(app);
+
 
 const postDB=async(post:PostData)=>{
     try {
@@ -85,5 +88,46 @@ querySnapshot.forEach((doc) => {
 return resp.reverse();
 }
 
+const registerUser = async ({
+    email,
+    password,
+  }: {
+    email: string;
+    password: string;
+  }): Promise<boolean> => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      console.log(userCredential.user);
+      return true;
+    } catch (error: any) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+      return false;
+    }
+  };
 
-export default{postDB,getPostFromDB}; 
+  const loginUser = async ({
+    email,
+    password,
+  }: {
+    email: string;
+    password: string;
+  }) => {
+    setPersistence(auth, browserSessionPersistence)
+    .then(() => {
+      return signInWithEmailAndPassword(auth, email, password);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });
+  };
+
+
+export default{postDB,getPostFromDB,registerUser,loginUser}; 
