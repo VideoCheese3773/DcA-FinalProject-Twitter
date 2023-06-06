@@ -98,8 +98,8 @@ class DashboardLogged extends HTMLElement {
                 dispatch(
                     await addNewPost({
                         payload:  {
-                            userimg:  "../../img/user.png",
-                            username:  "Username",
+                            userimg:  "../img/user.png",
+                            username:  "Username V2",
                             usertag:  "@username_1",
                             message:  textpost.value,
                             image:  actualImg,
