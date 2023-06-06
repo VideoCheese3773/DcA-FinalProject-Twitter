@@ -7,7 +7,7 @@ class LogIn extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" })
-    }    
+    }
 
     connectedCallback() {
         if (this.shadowRoot) {
@@ -28,7 +28,7 @@ class LogIn extends HTMLElement {
                 <div class="closeButtonContainer">
                     <p id="closePopUp">X</p>
                 </div>
-                <img src="/img/twitterLogo.png" class="menuIcon">
+                <img src="../img/twitterLogo.png" class="menuIcon">
                 <h1 class="banner">Log In On Twitter</h1>
                 <input class="input" type="email" placeholder="email" id="email"></input>
                 <input class="input" type="password" placeholder="Password" id="password"></input>

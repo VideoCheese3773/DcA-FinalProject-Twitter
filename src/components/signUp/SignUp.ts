@@ -26,7 +26,7 @@ class SignUp extends HTMLElement {
                 <div class="closeButtonContainer">
                     <p id="closePopUp">X</p>
                 </div>
-                <img src="/img/twitterLogo.png" class="menuIcon">
+                <img src="../img/twitterLogo.png" class="menuIcon">
                 <h1 class="banner">Sign Up On Twitter</h1>
                 <input class="input" type="text" placeholder="Username"></input>
                 <input class="input" type="password" placeholder="Password"></input>

@@ -26,7 +26,7 @@ class UserConfig extends HTMLElement {
                 <div class="closeButtonContainer">
                     <p id="closePopUp">X</p>
                 </div>
-                <img src="/img/user.png" class="menuIcon">
+                <img src="../img/user.png" class="menuIcon">
                 <h1 class="banner">User Configuration</h1>
                 <input class="input" type="text" placeholder="Username"></input>
                 <h1 class="banner">Biography</h1>
