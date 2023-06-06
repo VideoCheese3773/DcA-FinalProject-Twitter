@@ -1,6 +1,9 @@
 import Storage, { PersistanceKeys } from "../utils/storage";
 import { Actions, AppState, Observer, Screens } from "../types/store";
 import { reducer } from "./reducer";
+import { navigate, setUserCredentials } from "./actions";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 const emptyState: AppState = {
     screen: Screens.DASHBOARD,
@@ -31,3 +34,14 @@ export const dispatch = (action: Actions) => {
 export const addObserver = (ref: Observer) => {
     observers =  [...observers, ref];
 }
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+      user.email !== null ? dispatch(setUserCredentials(user.email)) : '';
+      console.log("yey")
+      dispatch(navigate(Screens.LOGGED));
+    } else {
+        console.log("ney")
+      dispatch(navigate(Screens.DASHBOARD));
+    }
+  });

@@ -25,3 +25,10 @@ export const addNewPost = async ({payload}: Pick<AddPostAction, "payload">): Pro
         payload
     }
 }
+
+export const setUserCredentials = (user: string):any => {
+  return {
+    type: "SETUSER",
+    payload: user,
+  };
+};

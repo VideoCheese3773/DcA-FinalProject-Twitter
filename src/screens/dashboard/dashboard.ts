@@ -8,6 +8,9 @@ import styles from "./styles.css"
 import { getPosts, navigate } from "../../store/actions"
 import { appState, dispatch } from "../../store/index";
 import { Screens } from "../../types/store";
+import firebase from "../../utils/firebase";
+
+const credentials = { email: "", password: "" };
 
 class Dashboard extends HTMLElement {
     showP: Post[] = [];
@@ -16,6 +19,10 @@ class Dashboard extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" })
     }
+
+    async handleLoginButton() {
+        firebase.loginUser(credentials);
+      }
 
     async connectedCallback() {
         if (appState.posts.length === 0) {
@@ -85,6 +92,8 @@ class Dashboard extends HTMLElement {
             const switchSignUp = logIn.shadowRoot?.getElementById("signUpButton")
             const signUpButton = signUp.shadowRoot?.getElementById("signUpButton")
             const logInButton = logIn.shadowRoot?.getElementById("logInButton")
+            const email = logIn.shadowRoot?.getElementById("email")
+            const password = logIn.shadowRoot?.getElementById("password")
 
             //show sign up
             createAccount?.addEventListener('click', () => {
@@ -113,9 +122,21 @@ class Dashboard extends HTMLElement {
                 console.log("moving to logged screen")
                 dispatch(navigate(Screens.LOGGED))
             })
+
+            email?.addEventListener(
+                "change",
+                (e: any) => (credentials.email = e.target.value)
+              );
+
+            password?.addEventListener(
+                "change",
+                (e: any) => (credentials.password = e.target.value)
+              );
+
             logInButton?.addEventListener('click', () => {
-                console.log("moving to logged screen")
-                dispatch(navigate(Screens.LOGGED))
+                this.handleLoginButton()
+                //console.log("moving to logged screen")
+                //dispatch(navigate(Screens.LOGGED))
             })
         }
     }

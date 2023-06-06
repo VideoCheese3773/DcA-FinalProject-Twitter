@@ -6,7 +6,7 @@ import {createUserWithEmailAndPassword,getAuth,signInWithEmailAndPassword,setPer
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
-const auth = getAuth(app);
+export const auth = getAuth(app);
 
 
 const postDB=async(post:PostData)=>{
@@ -123,6 +123,7 @@ const registerUser = async ({
       return signInWithEmailAndPassword(auth, email, password);
     })
     .catch((error) => {
+      // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode, errorMessage);
