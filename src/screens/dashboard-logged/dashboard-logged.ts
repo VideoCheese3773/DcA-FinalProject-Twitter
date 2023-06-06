@@ -80,13 +80,21 @@ class DashboardLogged extends HTMLElement {
             this.shadowRoot.appendChild(container)
 
             const textpost = postbar.shadowRoot?.getElementById("inputBar") as HTMLInputElement
+            const imgpost = postbar.shadowRoot?.getElementById("imgBar") as HTMLInputElement
             const postapost = postbar.shadowRoot?.getElementById("postButton")
             const configButton = left.shadowRoot?.getElementById("configMenuButton")
             const configMenu = userConfig.shadowRoot?.getElementById("popUpMaster")
             const profileButton = left.shadowRoot?.getElementById("profileButton")
 
+            const defaultImg = "https://pbs.twimg.com/media/FeOm9aUaMAIKm8H?format=jpg&name=4096x4096"
+
             //make a post
             postapost?.addEventListener('click',async  () => {
+                let actualImg = defaultImg
+                if (imgpost.value !== "") {
+                    actualImg = imgpost.value
+                }
+
                 dispatch(
                     await addNewPost({
                         payload:  {
@@ -94,7 +102,7 @@ class DashboardLogged extends HTMLElement {
                             username:  "Username",
                             usertag:  "@username_1",
                             message:  textpost.value,
-                            image:  "https://pbs.twimg.com/media/FeOm9aUaMAIKm8H?format=jpg&name=4096x4096",
+                            image:  actualImg,
                             comcount:  "0",
                             retcount:  "0",
                             likescount:  "0",
