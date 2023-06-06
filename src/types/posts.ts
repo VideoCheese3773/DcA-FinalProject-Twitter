@@ -7,4 +7,5 @@ export interface PostData{
     comcount: string,
     retcount: string,
     likescount: string,
+    date: any,
 }

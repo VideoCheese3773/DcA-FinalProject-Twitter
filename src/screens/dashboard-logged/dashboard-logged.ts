@@ -106,6 +106,7 @@ class DashboardLogged extends HTMLElement {
                             comcount:  "0",
                             retcount:  "0",
                             likescount:  "0",
+                            date: new Date()
                         }
                     })
                 )
