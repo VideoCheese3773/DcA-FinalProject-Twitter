@@ -15,12 +15,21 @@
     border: 4px solid rgb(29, 155, 240);
 }
 
-#inputBar {
-    width: 85%;
+.inputBar {
+    width: 100%;
     background-color: rgb(32, 47, 54);
     border: none;
     border-radius: 15px;
     padding: 1%;
+    margin: 1% 0%;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0% 1%;
+    padding-bottom: 1%;
 }
 
 #postButton {
@@ -37,7 +46,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 2%;
-    
+
     align-items: center;
 }
 
@@ -56,7 +65,7 @@
         border-radius: 50%;
         border: 4px solid rgb(29, 155, 240);
     }
-    
+
     #inputBar {
         width: 85%;
         background-color: rgb(32, 47, 54);
@@ -65,5 +74,5 @@
         padding: 1%;
         align-items: center;
     }
-    
+
 }

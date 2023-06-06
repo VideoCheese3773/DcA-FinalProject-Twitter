@@ -5,11 +5,11 @@ export enum bannerProps {
     "username" = "username",
     "usertag" = "usertag",
     "userdesc"="userdesc",
-    
+
 }
 
 export default class uBanner extends HTMLElement {
-    userimg: string="/img/user.png";
+    userimg: string="../img/user.png";
     username: string="username";
     usertag: string="@usertag";
     userdesc: string="hello, ur computer has virus"
@@ -87,7 +87,7 @@ export default class uBanner extends HTMLElement {
 
             this.shadowRoot.appendChild(container)
 
-            
+
         }
     }
 }

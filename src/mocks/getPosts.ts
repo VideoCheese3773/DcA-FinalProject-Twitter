@@ -12,6 +12,7 @@ export const postList:PostData[]=[
         comcount: "0",
         retcount: "0",
         likescount: "0",
+        date: 1
     },
 
     {
@@ -24,6 +25,7 @@ export const postList:PostData[]=[
         comcount: "0",
         retcount: "0",
         likescount: "0",
+        date: 2
     },
 
     {
@@ -36,6 +38,7 @@ export const postList:PostData[]=[
         comcount: "0",
         retcount: "0",
         likescount: "0",
+        date: 3
     },
 
     {
@@ -47,6 +50,7 @@ export const postList:PostData[]=[
         comcount: "0",
         retcount: "0",
         likescount: "0",
+        date: 4
     },
 
     {
@@ -58,5 +62,6 @@ export const postList:PostData[]=[
         comcount: "0",
         retcount: "0",
         likescount: "0",
+        date: 5
     },
 ]

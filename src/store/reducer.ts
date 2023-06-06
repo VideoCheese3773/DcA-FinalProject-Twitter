@@ -1,9 +1,9 @@
 import { Actions, AppState, NavigationActions,PostActions } from "../types/store";
 
 export const reducer = (
-    currentAction: Actions,
-    currentState: AppState
-): AppState => {
+    currentAction: any,
+    currentState: any
+) => {
     const { action, payload } = currentAction;
 
     switch (action) {
@@ -27,6 +27,9 @@ export const reducer = (
                 ...currentState,
                 posts: payload
             }
+        case "SETUSER":
+            currentState.user = action.payload;
+            break;
 
         default:
             return currentState;

@@ -1,5 +1,7 @@
 import styles from "./styles.css"
 
+
+
 class LogIn extends HTMLElement {
 
     constructor() {
@@ -26,10 +28,10 @@ class LogIn extends HTMLElement {
                 <div class="closeButtonContainer">
                     <p id="closePopUp">X</p>
                 </div>
-                <img src="/img/twitterLogo.png" class="menuIcon">
+                <img src="../img/twitterLogo.png" class="menuIcon">
                 <h1 class="banner">Log In On Twitter</h1>
-                <input class="input" type="text" placeholder="Username"></input>
-                <input class="input" type="password" placeholder="Password"></input>
+                <input class="input" type="email" placeholder="email" id="email"></input>
+                <input class="input" type="password" placeholder="Password" id="password"></input>
                 <button class="button" id="logInButton">Log In</button>
                 <p>If you don't have an account, <a id="signUpButton" class="logIn">Sign Up.</a></p>
             </div>
@@ -41,6 +43,8 @@ class LogIn extends HTMLElement {
         closePopUp?.addEventListener('click', () =>{
             popUpMaster?.classList.add("noShow")
         })
+
+
     }
 }
 
