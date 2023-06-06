@@ -25,7 +25,7 @@ class RightMenuLogged extends HTMLElement {
             <h1 class="newTwitter">Who to follow?</h1>
             <div class="rightMenuItem">
                 <div class="leftUser">
-                    <img src="/img/user.png" class="userIcon">
+                    <img src="../img/user.png" class="userIcon">
                     <div class="userInfo">
                         <p id="username" class="leftMenuText">Username</p>
                         <p id="usertag" class="leftMenuText">@Username</p>
@@ -36,7 +36,7 @@ class RightMenuLogged extends HTMLElement {
 
             <div class="rightMenuItem">
                 <div class="leftUser">
-                    <img src="/img/user.png" class="userIcon">
+                    <img src="../img/user.png" class="userIcon">
                     <div class="userInfo">
                         <p id="username" class="leftMenuText">Username</p>
                         <p id="usertag" class="leftMenuText">@Username</p>
@@ -47,7 +47,7 @@ class RightMenuLogged extends HTMLElement {
 
             <div class="rightMenuItem">
                 <div class="leftUser">
-                    <img src="/img/user.png" class="userIcon">
+                    <img src="../img/user.png" class="userIcon">
                     <div class="userInfo">
                         <p id="username" class="leftMenuText">Username</p>
                         <p id="usertag" class="leftMenuText">@Username</p>
@@ -58,7 +58,7 @@ class RightMenuLogged extends HTMLElement {
 
             <div class="rightMenuItem">
                 <div class="leftUser">
-                    <img src="/img/user.png" class="userIcon">
+                    <img src="../img/user.png" class="userIcon">
                     <div class="userInfo">
                         <p id="username" class="leftMenuText">Username</p>
                         <p id="usertag" class="leftMenuText">@Username</p>
@@ -69,7 +69,7 @@ class RightMenuLogged extends HTMLElement {
 
             <div class="rightMenuItem">
                 <div class="leftUser">
-                    <img src="/img/user.png" class="userIcon">
+                    <img src="../img/user.png" class="userIcon">
                     <div class="userInfo">
                         <p id="username" class="leftMenuText">Username</p>
                         <p id="usertag" class="leftMenuText">@Username</p>

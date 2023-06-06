@@ -21,7 +21,7 @@ export default class PostBar extends HTMLElement {
                 <link rel="stylesheet" href="./index.css">
                 <section class="postbarCont">
                 <section class="up-bar">
-                <img src="/img/user.png" class="userIcon">
+                <img src="../img/user.png" class="userIcon">
                 <div class="inputContainer">
                     <input id="inputBar" class="inputBar" type="text" placeholder="What's cookin' good lookin'?">
                     <input id="imgBar" class="inputBar" type="text" placeholder="If you wanna post a pic... (URL only pls)">

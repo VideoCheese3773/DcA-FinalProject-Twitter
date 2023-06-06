@@ -23,8 +23,8 @@ export default class SearchBar extends HTMLElement {
             this.shadowRoot.innerHTML += `
                 <section class="searchCont">
                 <input id="search" type="text" placeholder="Search...">
-                <img src="/img/lupe.png" class="searchIcon">
-                <img src="/img/cogAlt.png" class="searchIcon" id="cogButton">
+                <img src="../img/lupe.png" class="searchIcon">
+                <img src="../img/cogAlt.png" class="searchIcon" id="cogButton">
                 </section>
             `;
         }
